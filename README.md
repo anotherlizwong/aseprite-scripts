@@ -1,0 +1,2 @@
+# aseprite-scripts
+helper scripts
