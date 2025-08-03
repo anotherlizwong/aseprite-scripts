@@ -29,10 +29,12 @@ app.transaction(
         app.activeLayer.name = variantNames[1]
 
         for i = 1, #variantNames-1 do
+            app.command.GotoPreviousLayer()
+            print("layer to copy: " .. app.activeLayer.name)
             copyTileToNewLayer(variantNames[i + 1])
-            app.activeLayer = spr.layers[i+1]
-            print("layer: " .. app.activeLayer.name)
-            spr.selection:selectAll()
+            print("current layer: " .. app.activeLayer.name)
+            -- app.activeLayer = spr.layers[i+1]
+            -- spr.selection:selectAll()
             for j, color in ipairs(mapping) do
                 -- flip the colors in the palettes
                 app.command.ReplaceColor{
@@ -42,7 +44,6 @@ app.transaction(
                     tolerance=0
                 }
                 print("Replaced color " .. color[1] .. " with " .. color[i + 1])
-                app.refresh()
             end
             spr.selection:deselect()
         end
