@@ -16,7 +16,7 @@ local mapping = {
 
 local copyTileToNewLayer=function(name)
     spr.selection:selectAll()
-    app.command.CopyMerged()
+    app.command.Copy()
     app.command.NewLayer{fromClipboard=true}
     app.activeLayer.name = name
     spr.selection:deselect()
