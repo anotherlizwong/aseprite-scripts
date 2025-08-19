@@ -4,14 +4,15 @@ if not spr then
 end
 
 local mapping = {
-    {15, 5, 14},    -- Dark Blue, Orange, Dark Green
-    {20, 5, 27},     -- Light Light Blue, Orange, Red
-    {17, 11, 5},    -- Blue, Green, Orange
-    {8, 21, 3},     -- Yellow, White, Brown
-    {18, 10, 6},     -- Light Blue, Light Green, Light Orange
-    {2, 15, 14},     -- Dark Purple, Dark Blue, Dark Green
-    {31, 22, 3},     -- Gold, Light Grey, Brown
-    {26, 17, 11}     -- Light Purple, Blue, Light Green
+    {17, 11, 5},      -- Blue, Green, Orange (body)
+    {18, 10, 6},      -- Light Blue, Light Green, Light Orange (body highlight)
+    {8, 21, 19},      -- Yellow, White, Sky Blue (eyes)
+    {31, 22, 17},     -- Gold, Light Grey, Blue (eye shading)
+    {20, 5, 27},      -- Peach, White, Peach (tusk highlight)
+    {7, 21, 7},       -- Peach, White, Peach (tusk shading)
+    {15, 5, 14},      -- Dark Blue, Orange, Dark Green (clothing)
+    {26, 17, 11},     -- Light Purple, Blue, Light Green (clothing 2)
+    {2, 15, 14}       -- Dark Purple, Dark Blue, Dark Green (clothing 2 shading)
 }
 
 local copyTileToNewLayer=function(name)
